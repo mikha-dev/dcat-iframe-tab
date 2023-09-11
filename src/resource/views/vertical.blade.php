@@ -26,23 +26,23 @@
         @endif
                 ">
         <input type="hidden" id="use_id" value="{{Admin::user()->id}}">
-        {{--右键菜单监控--}}
+        {{--Right-click menu monitoring--}}
         <div class="mouse-click-menu">
             <ul>
-                <li><a href="javascript:;" class="menu-item tab-close-all">关闭所有标签页</a></li>
-                <li><a href="javascript:;" class="menu-item tab-close-other">关闭其他标签页</a></li>
-                <li><a href="javascript:;" class="menu-item tab-refresh">刷新当前标签页</a></li>
+                <li><a href="javascript:;" class="menu-item tab-close-all">Close All</a></li>
+                <li><a href="javascript:;" class="menu-item tab-close-other">Close Other</a></li>
+                <!-- <li><a href="javascript:;" class="menu-item tab-refresh">Refresh</a></li> -->
                 @if(isset(config('admin.layout')['iframe_tab_cache'])&&config('admin.layout')['iframe_tab_cache']==1)
-                    <li><a href="javascript:;" class="menu-item tab-clear-cache">清空标签页缓存</a></li>
+                    <li><a href="javascript:;" class="menu-item tab-clear-cache">Clear Cache</a></li>
                 @else
                     @if(config('iframe_tab.cache'))
-                        <li><a href="javascript:;" class="menu-item tab-clear-cache">清空标签页缓存</a></li>
+                        <li><a href="javascript:;" class="menu-item tab-clear-cache">Clear Cache</a></li>
                     @endif
                 @endif
 
                 <li class="li_separate"></li>
-                <li><a href="javascript:;" class="menu-item tab-copy-link">复制标签页链接</a></li>
-                <li><a href="javascript:;" class="menu-item tab-open-link">新标签页中打开</a></li>
+<!--                <li><a href="javascript:;" class="menu-item tab-copy-link">Copy Link</a></li>
+                <li><a href="javascript:;" class="menu-item tab-open-link">Open Link</a></li> -->
             </ul>
         </div>
         <div
